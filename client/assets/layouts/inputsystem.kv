@@ -1,0 +1,36 @@
+
+<GraphicInputSystem>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+
+        MDLabel:
+            text: "You"
+            halign: "center"
+            valign: "top"
+            font_style: "H5"
+            size_hint_y: 0.1
+
+        MDIconButton:
+            icon: "microphone"
+            pos_hint: {"center_x": 0.5}
+            icon_size_theme: "Custom"
+            icon_color_theme: "Custom"
+            icon_size: dp(60)
+            icon_color: app.theme_cls.primary_color
+
+            on_release:
+                input_field.text = ""
+                root.start_voice_input()
+
+
+        MDTextField:
+            id: input_field
+            hint_text: "Type your input here"
+            helper_text: "Or use voice input"
+            helper_text_mode: "on_focus"
+            size_hint_y: None
+            height: dp(40)
+
+       

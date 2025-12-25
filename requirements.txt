@@ -1,0 +1,8 @@
+Flask>=2.0
+requests
+SpeechRecognition
+pyttsx3
+pyaudio
+# On Windows, installing PyAudio is easiest with pipwin:
+# pip install pipwin
+# pipwin install pyaudio
